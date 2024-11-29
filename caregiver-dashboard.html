@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caregiver Dashboard Services</title>
+    <link rel="stylesheet" href="assets/css/caregiver-dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>JKL Healthcare Services</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#patients">Assigned Patients</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+        </ul>
+        <button id="logoutButton" class="logout-btn">Logout</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="dashboard" class="stats-section">
+            <h2>Dashboard Overview</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Assigned Patients</h3>
+                    <p id="totalPatients">1
+
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="patients" class="patients-section">
+            <h2>Assigned Patients</h2>
+            <ul id="assignedPatientsList">
+                <!-- Assigned patients will be listed here -->
+            </ul>
+        </section>
+
+        <!-- Schedule Appointment Section -->
+        <section id="appointments" class="schedule-section">
+            <h2>Schedule an Appointment</h2>
+            <form id="scheduleAppointmentForm">
+                <label for="patientId">Select Patient:</label>
+                <select id="patientId" required>
+                    <option value="Test patient 1">Test Patient 1</option> 
+                    <option value="Test patient 2">Loading ....</option>
+                </select>
+
+                <label for="appointmentDate">Appointment Date:</label>
+                <input type="datetime-local" id="appointmentDate" required>
+
+                <label for="notes">Notes:</label>
+                <textarea id="notes" rows="3" required></textarea>
+
+                <button type="submit">Schedule Appointment</button>
+            </form>
+        </section>
+
+        <!-- View Scheduled Appointments Section -->
+        <section class="view-appointments-section">
+            <h2>Your Scheduled Appointments</h2>
+            <div id="appointmentsList" class="appointments-list">
+                <!-- Example Static Appointment 1 -->
+                <div class="appointment-item">
+                    <p><strong>Patient Name:</strong> Loding...</p>
+                    <p><strong>Scheduled Date:</strong> Loding..</p>
+                    <button class="edit-btn" onclick="editAppointment(1)">Edit</button>
+                </div>
+
+                <!-- Example Static Appointment 2 -->
+                <div class="appointment-item">
+                    <p><strong>Patient Name:</strong> <input type="text"></p>
+                    <p><strong>Scheduled Date:</strong> <input type="datetime-local" name="" id=""></p>
+                </div>
+                <div>  <button type="submit">Update Appointment</button>
+                    <button type="button" id="cancelEdit" onclick="cancelEdit()">Cancel</button>
+               </div>
+            </div>
+        </section>
+
+        <!-- Edit Appointment Section (hidden by default) -->
+        <section id="editAppointmentSection" class="edit-appointment-section" style="display: none;">
+            <h2>Edit Appointment</h2>
+            <form id="editAppointmentForm">
+                <label for="editPatientId">Select Patient:</label>
+                <select id="editPatientId" required>
+                    <option value="Test patient 1">Test Patient 1</option>
+                    <option value="Test patient 2">Loding....</option>
+                </select>
+
+                <label for="editAppointmentDate">New Appointment Date:</label>
+                <input type="datetime-local" id="editAppointmentDate" required>
+
+                <label for="editNotes">Notes:</label>
+                <textarea id="editNotes" rows="3"></textarea>
+
+                <button type="submit">Update Appointment</button>
+                <button type="button" id="cancelEdit" onclick="cancelEdit()">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="assets/js/caregiver-dashboard.js"></script>
+</body>
+</html>

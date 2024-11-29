@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - JKL Healthcare</title>
+    <link rel="stylesheet" href="assets/css/admin-dashboard.css">
+    <style>
+        /* Add background image to the body */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('assets/images/image_admin_dashboard2.png'); /* Correct the path here */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center center; /* Center the image */
+            background-attachment: fixed; /* Keep the image fixed when scrolling */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Overlay to make content more readable */
+        .container-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Full height of the viewport */
+            background-color: rgba(255, 255, 255, 0.7);  /* Add slight overlay to make the form stand out */
+        }
+
+        /* Keep the existing styling for header, sections, etc. */
+        .dashboard-header {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent header background */
+            padding: 20px;
+            color: white;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: white;
+            margin-right: 20px;
+        }
+
+        /* Other section styling remains the same */
+        .dashboard-main {
+            padding: 20px;
+            color: #333;
+        }
+
+        .stat-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .assign-caregiver-section,
+        .recent-activities {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="JKL Healthcare Logo" class="logo">
+            <h1>JKL Healthcare Services</h1>
+        </div>
+        <nav class="nav-bar">
+            <a href="#profile" class="nav-link active"><i class="icon-profile"></i> Profile</a>
+            <a href="#appointments" class="nav-link"><i class="icon-appointments"></i> Appointments</a>
+            <a href="#medical-history" class="nav-link"><i class="icon-medical"></i> Medical History</a>
+            <a href="#test-results" class="nav-link"><i class="icon-tests"></i> Test Results</a>
+            <a href="#notifications" class="nav-link"><i class="icon-notifications"></i> Notifications</a>
+            <button id="logoutButton" class="logout-btn">Logout</button>
+        </nav>
+    </header>
+    
+    <main class="dashboard-main">
+        <section class="welcome-section">
+            <h1>Welcome to Admin Dashboard</h1>
+            <p>Manage Patients, Caregivers, Assignment scheduling</p>
+        </section>
+
+        <section class="stats-container">
+            <div class="stat-item">
+                <h3>Total Patients</h3>
+                <p>0</p>
+            </div>
+            <div class="stat-item">
+                <h3>Total Caregivers</h3>
+                <p>0</p>
+            </div>
+            <div class="stat-item">
+                <h3>Active Appointments</h3>
+                <p>0</p>
+            </div>
+            <div class="stat-item">
+                <h3>Pending Appointments</h3>
+                <p>0</p>
+            </div>
+            <div class="stat-item">
+                <h3>Pending Patient Approvals</h3>
+                <p>0</p>
+            </div>
+           
+        </section>
+
+        <section id="assign-caregiver" class="assign-caregiver-section">
+            <h2>Assign Caregiver's to Patient's</h2>
+            <form id="assignForm">
+                <label for="patient">Select Patient:  </label>
+                <select id="patient">
+                    <option value="1"> Test Patient 1</option>
+                    <option value="2">Loading ... </option>
+                </select>
+
+                <label for="caregiver">  Select Caregiver: </label>
+                <select id="caregiver">
+                    <option value="1"> Test Caregiver 1</option>
+                    <option value="2">Loading ... </option>
+                </select>
+
+                <button type="submit">Assign</button>
+            </form>
+        </section>
+
+        <section id="recent-activities" class="recent-activities">
+            <h2>Recent Activities</h2>
+            <ul>
+                <li>Loading ....</li>
+                <li>Loading.....</li>
+                
+                
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 JKL Healthcare. All rights reserved.</p>
+    </footer>
+</body>
+</html>

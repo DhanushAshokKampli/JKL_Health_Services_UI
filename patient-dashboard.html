@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - JKL Healthcare</title>
+    <link rel="stylesheet" href="assets/css/patient-dashboard.css">
+    <script defer src="assets/js/patient-dashboard.js"></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="JKL Healthcare Logo" class="logo">
+            <h1>Welcome to JKL Healthcare Services </h1>
+            <h1>Test Patient 1 Dashboard</h1>
+
+        </div>
+        <button id="logoutButton" class="logout-btn">Logout</button>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#profile" class="active">Profile</a></li>
+                <li><a href="#appointments">Patient Appointments</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Profile Section -->
+            <section id="profile" class="dashboard-section">
+                <h2>Your Profile</h2>
+                <!-- Profile Display -->
+                <div id="profileDisplay" class="profile-display">
+                    <p><strong>First Name:</strong> <span id="displayFirstName">Loading...</span></p>
+                    <p><strong>Last Name:</strong> <span id="displayLastName">Loading...</span></p>
+                    <p><strong>Phone Number:</strong> <span id="displayPhoneNumber">Loading...</span></p>
+                    <p><strong>Email:</strong> <span id="displayEmail">Loading...</span></p>
+                    <p><strong>Address:</strong> <span id="displayAddress">Loading...</span></p>
+                </div>
+
+                <h2>Edit Your Profile</h2>
+                <!-- Update Profile Form -->
+                <form id="updateProfileForm">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" value="">
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" value="">
+
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" value="+44">
+
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" value="">
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address">Loding...</textarea>
+
+                    <button type="submit" class="update-btn">Loding...</button>
+                    <button type="button" id="deleteProfileButton" class="delete-btn">Loding....</button>
+                </form>
+            </section>
+
+            <section id="appointments" class="dashboard-section">
+                <h2>Your Appointments</h2>
+                <div id="appointmentsList" class="appointments-list">
+                  
+            <section class="view-appointments-section">
+                <h2>Your Scheduled Appointments</h2>
+                <div id="appointmentsList" class="appointments-list">
+                 
+                </div>
+            </section>
+
+
+                
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

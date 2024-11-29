@@ -1,0 +1,26 @@
+button.primary {
+    background-color: #28a745;
+    color: white;
+}
+
+button.primary:hover {
+    background-color: #218838;
+}
+
+button.secondary {
+    background-color: #ffc107;
+    color: white;
+}
+
+button.secondary:hover {
+    background-color: #e0a800;
+}
+
+button.danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.danger:hover {
+    background-color: #c82333;
+}
